@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*
+================================
+HEADER STYLES
+================================
+*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  display: flex;
+  margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.meme--face {
+  width: 32px;
+  height: 26px;
+  align-self: center;
+  margin-right: 5px;
+}
+
+.title-text {
+  color: white;
+  font-weight: 700;
+  font-size: 1.08rem;
+  align-self: center;
+}
+
+.subtitle-text {
+  color: white;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin: 10px;
+}
+
+/*
+================================
+MAIN STYLES
+================================
+*/
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px 0 35px;
+}
+
+/*Enter Text Forms*/
+.form {
+  display: flex;
+  margin: 35px 0px 15px 0px;
+  justify-content: center;
+}
+
+.form-input1 {
+  margin-right: 5px;
+}
+
+.form-input2 {
+  margin-left: 5px;
+}
+
+/* Get Meme Button*/
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+}
+
+.btn-text {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Meme image and text*/
+
+.meme {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meme--image {
+  width: 90vw;
+  height: 50vh;
+  margin: 25px 25px 25px 25px;
+  border-radius: 3px;
+}
+
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.top {
+  top: 0;
+  margin-top: 40px;
+}
+
+.bottom {
+  bottom: 0;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 576px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 35px 35px 35px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+    color: white;
+  }
+
+  .title {
+    display: flex;
+    margin: 10px;
+  }
+
+  .meme--face {
+    width: 32px;
+    height: 26px;
+    align-self: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .title-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    align-self: center;
+  }
+
+  .subtitle-text {
+    color: white;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 20px;
+  }
+
+  .meme--image {
+    width: 90vw;
+    height: 80vh;
+    margin: 25px 25px 25px 25px;
+    border-radius: 3px;
   }
 }
